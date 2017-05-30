@@ -17,12 +17,16 @@ public class ProductServiceImpl implements ProductService {
 
 	@Override
 	public List<Product> getProducts() {
-		return null;
+		return products;
 	}
 
 	@Override
 	public int addProduct(Product product) {
-		return 0;
+		
+		product.setId(++productId);
+		products.add(product);
+		
+		return productId;
 	}
 
 }

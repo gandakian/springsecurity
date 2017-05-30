@@ -8,5 +8,13 @@
 	http://cxf.apache.org/jaxrs
 	http://cxf.apache.org/schemas/jaxrs.xsd">
 
+	<jaxrs:server id="productws" address="/productService">
+		<jaxrs:serviceBeans>
+			<ref bean="productService" />
+		</jaxrs:serviceBeans>
+	</jaxrs:server>
+
+	<bean id="productService" class="com.amirbhujel.rest.ProductServiceImpl" />
+
 
 </beans>
